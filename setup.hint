@@ -1,5 +1,5 @@
 category: Interpreters Math
-requires: cygwin libreadline6
+requires: libreadline6
 sdesc: "Mathematical scripting language with C syntax"
 ldesc: "Nickle is a programming language based prototyping environment 
 with powerful programming and scripting capabilities. Nickle supports a 
