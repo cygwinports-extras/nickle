@@ -1,0 +1,22 @@
+--- origsrc/nickle-2.68/Makefile.am	2008-06-21 04:22:32.000000000 -0500
++++ src/nickle-2.68/Makefile.am	2009-02-26 00:09:31.513625000 -0600
+@@ -53,7 +57,7 @@ nickle_SOURCES = \
+ 	builtin.c builtin.h \
+ 	builtin-foreign.c gram.y lex.l
+ 
+-nickle_LDFLAGS=$(NICKLE_LDFLAGS)
++nickle_LDFLAGS=$(NICKLE_LDFLAGS) -Wl,--export-all,--out-implib,libnickle.a
+ 
+ pkgdata_DATA = $(NICKLEFILES) COPYING
+ 
+@@ -126,6 +130,10 @@ nickle.spec: nickle.spec.in config.h
+ clean-local:
+ 	rm -f nickle.1 nickle.spec
+ 
++install-data-local:
++	$(mkinstalldirs) $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) libnickle.a $(DESTDIR)$(libdir)/libnickle.a
++
+ #
+ # This assumes you've got Mike Harris's rpmbuild-nonroot stuff installed
+ # using the defaults

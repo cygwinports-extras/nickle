@@ -1,3 +1,0 @@
-DESCRIPTION="Mathematical scripting language with C syntax"
-HOMEPAGE="http://nickle.org/"
-SRC_URI="http://nickle.org/release/${P}.tar.gz"
