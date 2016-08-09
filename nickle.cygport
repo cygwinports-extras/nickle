@@ -1,5 +1,5 @@
 NAME="nickle"
-VERSION=2.69
+VERSION=2.77
 RELEASE=1
 CATEGORY="Interpreters"
 SUMMARY="Mathematical scripting language with C syntax"
@@ -15,3 +15,11 @@ PATCH_URI="
 	2.68-implib.patch
 	2.68-async.patch
 "
+
+PKG_NAMES="nickle nickle-devel"
+nickle_CONTENTS="usr/bin/nickle.exe usr/share/doc/ usr/share/man/ usr/share/nickle/"
+nickle_devel_REQUIRES=${NAME}
+nickle_devel_CONTENTS="usr/include/nickle/ usr/lib/libnickle.a"
+
+
+MAKEOPTS+=" exampledir=/usr/share/doc/${NAME}/examples"
