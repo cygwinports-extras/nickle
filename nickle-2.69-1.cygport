@@ -1,5 +1,0 @@
-DESCRIPTION="Mathematical scripting language with C syntax"
-HOMEPAGE="http://nickle.org/"
-SRC_URI="http://nickle.org/release/${P}.tar.gz"
-PATCH_URI="2.68-implib.patch
-           2.68-async.patch"
